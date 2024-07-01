@@ -9,7 +9,7 @@ app = Flask(__name__)
 df = pd.read_csv('data.csv')
 
 # Importer le modèle
-with open('C:/Users/User/final_model/model.pkl', 'rb') as f:
+with open('model.pkl', 'rb') as f:
     model = pickle.load(f)
 
 @app.route('/')
