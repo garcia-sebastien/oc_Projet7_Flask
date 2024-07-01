@@ -1,20 +1,74 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OpenClassrooms Projet 7 - Probabilité de faillite d'un client</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f0f0f0;
+        }
+        header, main, footer {
+            width: 80%;
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        header {
+            text-align: center;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        input[type="text"] {
+            padding: 8px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            padding: 10px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        .note {
+            font-size: 14px;
+            color: #555;
+        }
+    </style>
 </head>
 <body>
-    <h1>OpenClassrooms Projet 7 - Probabilité de faillite d'un client</h1>
-
+    <header>
+        <h1>OpenClassrooms Projet 7 - Probabilité de faillite d'un client</h1>
+    </header>
+    <main>
+        <form action="/predict" method="post">
+            <label for="client_id">Spécifier l'ID du client :</label>
+            <input type="text" name="client_id" id="client_id" placeholder="Entrez l'ID du client" required pattern="\d{6}" title="L'ID doit être un nombre à 6 chiffres">
+            <input type="submit" value="Envoyer">
+        </form>
+        <p class="note">Note : Sélectionner un ID allant de 100002 à 278201</p>
+    </main>
     <footer>
-        <p>API créée par Sébastien Garcia</p>
+        <p>&copy; Créé par Sébastien Garcia.</p>
     </footer>
-
-    <form action="/predict" method="post">
-        <label for="client_id">Spécifier l'ID du client :</label>
-        <input type="text" name="client_id" id="client_id">
-        <input type="submit" value="Envoyer">
-    </form>
-	
 </body>
 </html>

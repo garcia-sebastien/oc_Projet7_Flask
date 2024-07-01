@@ -33,7 +33,7 @@ def predict():
         pred = (prob >= 0.52).astype(int)
 
         response = {
-            'probabilité': prob.tolist(),
+            'proba': prob.tolist(),
             'prediction': pred.tolist()
         }
     
