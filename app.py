@@ -18,7 +18,7 @@ def home():
 
 @app.route('/predict', methods=['POST'])
 def predict():
-    # Obtenir l'identifiant du client à partir du formulaire
+    # Obtenir l'identifiant du client à analyser
     client_id = int(request.form['client_id'])
 
     # Vérifier si l'identifiant du client est présent dans le dataframe
