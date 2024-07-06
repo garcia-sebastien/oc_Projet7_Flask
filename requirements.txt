@@ -40,7 +40,6 @@ contextlib2==21.6.0
 country-converter==1.2
 cssselect==1.1.0
 daal4py==2023.1.1
-datashape==0.5.4
 Deprecated==1.2.14
 dict-toolbox==5.0.0
 distlib==0.3.8
