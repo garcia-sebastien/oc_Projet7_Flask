@@ -137,7 +137,6 @@ rfc3986==1.5.0
 rich==13.7.1
 rich-click==1.8.3
 rsa==4.9
-scikeras==0.13.0
 scikit-build==0.17.6
 scikit-learn==1.2.2
 SecretStorage==3.3.3
