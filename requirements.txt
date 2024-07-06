@@ -111,7 +111,7 @@ msrestazure==0.6.4
 munkres==1.1.4
 namex==0.0.7
 ndg-httpsclient==0.5.1
-numpy==1.24.0
+numpy==1.24.3
 oauthlib==3.2.2
 opencensus==0.11.4
 opencensus-context==0.1.3
