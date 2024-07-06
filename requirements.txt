@@ -179,7 +179,6 @@ smmap==5.0.1
 sqlparse==0.5.0
 streamlit==1.36.0
 strictyaml==1.7.3
-TBB==0.2
 tensorboard==2.16.2
 tensorboard-data-server==0.7.2
 tensorflow==2.16.1
