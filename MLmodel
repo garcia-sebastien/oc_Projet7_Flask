@@ -12,9 +12,9 @@ flavors:
     pickled_model: model.pkl
     serialization_format: cloudpickle
     sklearn_version: 1.2.2
-mlflow_version: 2.13.0
-model_size_bytes: 133074
-model_uuid: 858bb07d472a48dd9b1337e87c00d323
+mlflow_version: 2.14.1
+model_size_bytes: 231131
+model_uuid: 9cc224e2d4f5406fa39e9c6173285771
 signature:
   inputs: '[{"type": "string", "name": "NAME_CONTRACT_TYPE", "required": true}, {"type":
     "string", "name": "CODE_GENDER", "required": true}, {"type": "string", "name":
@@ -114,4 +114,4 @@ signature:
     "AMT_REQ_CREDIT_BUREAU_YEAR", "required": false}]'
   outputs: '[{"type": "long", "name": "TARGET", "required": true}]'
   params: null
-utc_time_created: '2024-06-28 07:50:47.073666'
+utc_time_created: '2024-07-07 14:34:05.618490'
