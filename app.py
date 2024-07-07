@@ -2,6 +2,7 @@
 from flask import Flask, jsonify, render_template, request
 import pandas as pd
 import pickle
+import xgboost
 
 app = Flask(__name__)
 
