@@ -37,8 +37,11 @@ def predict():
         #     'prediction': pred.tolist()
         # }
         
+        # Conversion des données client en dictionnaire
+        features_client_dict = features_client.to_dict(orient='records')[0]
+        
         response = {
-            'features_client': features_client
+            'features_client': features_client_dict
         }
     
     else:
