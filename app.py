@@ -24,7 +24,9 @@ def predict():
     # Vérifier si l'identifiant du client est présent dans le dataframe
     if client_id in df['SK_ID_CURR'].values:
         # Sélectionner les données client
-        features_client = df[df['SK_ID_CURR'] == client_id].drop(columns=['SK_ID_CURR', 'TARGET'], errors='ignore')
+        features_client = df.loc[df['SK_ID_CURR'] == client_id]
+        # Suppression des colonnes SK_ID_CURR et TARGET
+        features_client = features_client.drop(columns=['SK_ID_CURR', 'TARGET'])
     
         # Faire la prédiction
         prob = model.predict_proba(features_client)[:, 1]
