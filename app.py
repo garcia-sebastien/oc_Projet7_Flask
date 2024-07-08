@@ -6,7 +6,7 @@ import pickle
 app = Flask(__name__)
 
 # Importer le dataframe
-df = pd.read_csv('data.csv')
+df = pd.read_csv('data_api.csv')
 
 # Importer le modèle
 with open('model.pkl', 'rb') as f:
@@ -26,22 +26,15 @@ def predict():
         # Sélectionner les données client
         features_client = df.loc[df['SK_ID_CURR'] == client_id]
         # Suppression des colonnes SK_ID_CURR et TARGET
-        features_client = features_client.drop(columns=['SK_ID_CURR', 'TARGET'])
+        features_client = features_client.drop(columns=['SK_ID_CURR'])
     
         # Faire la prédiction
-        # prob = model.predict_proba(features_client)[:, 1]
-        # pred = (prob >= 0.52).astype(int)
+        prob = model.predict_proba(features_client)[:, 1]
+        pred = (prob >= 0.52).astype(int)
 
-        # response = {
-        #     'proba': prob.tolist(),
-        #     'prediction': pred.tolist()
-        # }
-        
-        # Conversion des données client en dictionnaire
-        features_client_dict = features_client.to_dict(orient='records')[0]
-        
         response = {
-            'features_client': features_client_dict
+            'proba': prob.tolist(),
+            'prediction': pred.tolist()
         }
     
     else:
