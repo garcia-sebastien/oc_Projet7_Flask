@@ -10,7 +10,6 @@ jsonpickle==3.2.2
 jsonpointer==2.1
 lz4==4.3.2
 MarkupSafe==2.1.1
-mlflow==2.13.0
 numpy==1.26.0
 packaging==23.1
 pandas==2.2.2
